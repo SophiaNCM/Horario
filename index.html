@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="index.css">
+    <title>Exercicio</title>
+</head>
+<body>
+    <div id="Conteudo">
+        <div id="imagem"></div>
+        <h1>Horario: 11:00! </h1>
+    </div>
+    
+    <script>
+        var imagemCor = document.getElementById('imagem');
+        var Fundo = document.querySelector('body');
+        var texto = document.querySelector('h1');
+        var data = new Date();
+        var Horario = data.getHours();
+
+        if (Horario >= 12 && Horario <= 17){
+            imagemCor.style.backgroundColor = 'rgb(209, 118, 0)';
+            Fundo.style.backgroundColor =  'rgb(139, 81, 4)';
+            texto.innerHTML = `Horario: ${Horario}:00! Esta de tarde`
+        }
+        if(Horario >= 18 && Horario <= 24){
+            imagemCor.style.backgroundColor = 'rgb(18, 1, 170)';
+            Fundo.style.backgroundColor =  'rgb(9, 1, 80)';
+            texto.innerHTML = `Horario: ${Horario}:00! Já é noite`;
+        }
+        else{
+            texto.innerHTML = `Horario: ${Horario}:00! Ainda é manhã`;
+        }
+       
+
+    </script>
+</body>
+</html>
